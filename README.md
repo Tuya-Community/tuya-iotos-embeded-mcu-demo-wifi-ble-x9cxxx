@@ -1,89 +1,91 @@
-# Tuya IoTOS Embedded Mcu Demo Wifi Ble X9Cxxx
+# Tuya IoTOS Embedded Wi-Fi & Bluetooth LE Potentiometer
 
 [English](./README.md) | [中文](./README_zh.md)
 
-## Introduction  
+## Overview
 
-This Demo uses the Tuya smart cloud platform, Tuya smart APP, X9C104 and IoTOS Embedded MCU SDK to realize a Digitally Controlled Potentiometer .
+In this demo, we will show you how to develop with the MCU SDK to enable an X9C104 digital potentiometer to connect to the Tuya IoT Cloud with the Tuya Smart app.
 
-The implemented features include:
+Features:
 
-+ Resistance  set
-
-
-## Quick start  
-
-### Compile & Burn
-+ Download Tuya IoTOS Embeded Code
-+ Execute the test.uvprojx file
-+ Click Compile in the software and complete the download
++ Set resistance
 
 
-### File introduction 
+
+
+
+## Get started
+
+### Compile and flash
++ Download [Tuya IoTOS Embedded MCU SDK](https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-embeded-mcu-demo-4g-vending-machine/tree/master).
+
++ Run `test.uvprojx`.
+
++ Click **Compile** on the software to download the code.
+
+
+### File introduction
 
 ```
 ├── user
-│   ├── main.c
-│   ├── MY_ST_config.h
+│   ├── main.c
+│   ├── MY_ST_config.h
 ├── CMSIS
-│   ├── system_stm32g0xx.c
-│   ├── startup_stm32g071xx.s
+│   ├── system_stm32g0xx.c
+│   ├── startup_stm32g071xx.s
 ├── SYSTEM
-│   ├── sys.c
-│   ├── sys.h
-│   ├── RCC.c
-│   ├── RCC.h
-│   ├── delay.c
-│   ├── delay.h
-│   ├── USART.c
-│   ├── USART.h
-│   ├── IO.c
-│   ├── IO.h
-│   ├── TIM.c
-│   ├── TIM.h
+│   ├── sys.c
+│   ├── sys.h
+│   ├── RCC.c
+│   ├── RCC.h
+│   ├── delay.c
+│   ├── delay.h
+│   ├── USART.c
+│   ├── USART.h
+│   ├── IO.c
+│   ├── IO.h
+│   ├── TIM.c
+│   ├── TIM.h
 └── SYSTEM
-    ├── mcu_api.c
-    ├── mcu_api.h
-    ├── protocol.c
-    ├── protocol.h
+    ├── mcu_api.c
+    ├── mcu_api.h
+    ├── protocol.c
+    ├── protocol.h
     ├── system.c
-    ├── system.h
+    ├── system.h
     └── wifi.h
-    
+
 ```
 
 
 
 ### Demo entry
 
-Entry file：main.c
+Entry file: `main.c`
 
-Important functions：main()
+Main function: `main()`
 
-+ Initialize and configure MCU IO port, USART, timer, etc. All events are polled and judged in while(1)。
++ Initialize and configure I/Os, USART, and timer of the MCU. All events are polled and determined in `while(1)`.
 
 
 
-### I/O List  
+### Pin configuration
 
-|  X9C104  | UASRT1  | SWITCH |
+| X9C104 | UASRT1 | SWITCH |
 | :------: | :-----: | :----: |
-| PB11 INC | PC4 TXD |  PC13  |
+| PB11 INC | PC4 TXD | PC13 |
 | PB12 U/D | PC5 RXD |        |
 
+## Reference
 
-
-## Related Documents
-
-  Tuya Demo Center: https://developer.tuya.com/demo
+[Tuya Project Hub](https://developer.tuya.com/demo)
 
 
 
 ## Technical Support
 
-  You can get support for Tuya by using the following methods:
+You can get support from Tuya with the following methods:
 
-- Developer Center: https://developer.tuya.com
-- Help Center: https://support.tuya.com/help
-- Technical Support Work Order Center: [https://service.console.tuya.com](https://service.console.tuya.com/) 
-
+- [Tuya IoT Developer Platform](https://developer.tuya.com/en/)
+- [Help Center](https://support.tuya.com/en/help)
+- [Service & Support](https://service.console.tuya.com)[](https://service.console.tuya.com/)
